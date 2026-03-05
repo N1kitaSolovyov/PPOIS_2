@@ -56,11 +56,6 @@ def cat(fs: FileSystem, file_path: str) -> str:
 
 
 def cp(fs: FileSystem, src: str, dst: str) -> File:
-    """
-    Копировать файл.
-    src: путь к исходному файлу.
-    dst: путь к целевой папке или полный путь с новым именем.
-    """
     source = fs.resolve_path(src)
     if source is None:
         raise FileNotFoundError(f"Исходный файл '{src}' не найден")
@@ -113,13 +108,6 @@ def mv(fs: FileSystem, src: str, dst: str) -> File:
 
 
 def rm(fs: FileSystem, path: str, recursive: bool = False) -> None:
-    """
-    Удалить элемент по пути.
-    - Если это файл, удаляется всегда.
-    - Если это папка:
-        * recursive=True: удаляется папка со всем содержимым.
-        * recursive=False: удаляется только пустая папка.
-    """
     target = fs.resolve_path(path)
     if target is None:
         raise FileNotFoundError(f"Путь '{path}' не найден")
@@ -131,6 +119,4 @@ def rm(fs: FileSystem, path: str, recursive: bool = False) -> None:
     if isinstance(target, Folder):
         if not recursive and target.list_entries():
             raise IsADirectoryError(f"Папка '{path}' не пуста. Используйте rm -r для рекурсивного удаления")
-        # Если recursive=True или папка пуста, удаляем её
-    # Удаляем элемент из родителя (для папки это удалит и всё её содержимое, т.к. ссылки теряются)
     target.parent.remove_entry(target.name)

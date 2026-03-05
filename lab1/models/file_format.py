@@ -5,13 +5,11 @@ from dataclasses import dataclass
 
 @dataclass
 class FormatProperties:
-    """Минимальные свойства формата: расширение и категория."""
     extension: str
     category: str
 
 
 class FileFormat(Enum):
-    """Форматы файлов для файловой системы (только необходимые)."""
 
     TXT = FormatProperties("txt", "text")
     PDF = FormatProperties("pdf", "document")
@@ -31,7 +29,6 @@ class FileFormat(Enum):
 
     @classmethod
     def from_file(cls, filename: str) -> Optional["FileFormat"]:
-        """Определяет формат по имени файла."""
         if '.' in filename:
             ext = filename.split('.')[-1].lower()
             for fmt in cls:
@@ -40,7 +37,6 @@ class FileFormat(Enum):
         return None
 
     def get_folder_name_for_category(self) -> str:
-        """Возвращает имя папки для организации файлов этой категории."""
         folders = {
             "text": "Текстовые файлы",
             "document": "Документы",

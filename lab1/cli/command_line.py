@@ -61,9 +61,7 @@ class CLI:
             except Exception as e:
                 print(f"Ошибка: {e}")
 
-    # ---------- Навигация и просмотр ----------
     def do_ls(self, args: List[str]):
-        """Показать содержимое папки. Использование: ls [путь]"""
         path = args[0] if args else '.'
         target = self.fs.resolve_path(path)
         if target is None:
@@ -82,7 +80,6 @@ class CLI:
             print(f"{marker} {name} ({entry.get_size()} байт)")
 
     def do_cd(self, args: List[str]):
-        """Сменить текущую папку. Использование: cd <путь>"""
         if len(args) != 1:
             print("Использование: cd <путь>")
             return
@@ -106,7 +103,6 @@ class CLI:
             print("(нет текущей папки)")
 
     def do_tree(self, args: List[str]):
-        """Показать дерево папок. Использование: tree [путь]"""
         path = args[0] if args else '.'
         target = self.fs.resolve_path(path)
         if target is None:
@@ -128,9 +124,7 @@ class CLI:
                 extension = '    ' if is_last else '│   '
                 self._print_tree(entry, prefix + extension)
 
-    # ---------- Создание ----------
     def do_touch(self, args: List[str]):
-        """Создать пустой файл. Использование: touch <имя>"""
         if len(args) != 1:
             print("Использование: touch <имя>")
             return
@@ -141,7 +135,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_mkdir(self, args: List[str]):
-        """Создать папку. Использование: mkdir <имя>"""
         if len(args) != 1:
             print("Использование: mkdir <имя>")
             return
@@ -153,7 +146,6 @@ class CLI:
 
     # ---------- Чтение/запись ----------
     def do_write(self, args: List[str]):
-        """Записать текст в файл. Использование: write <файл> <текст>"""
         if len(args) < 2:
             print("Использование: write <файл> <текст>")
             return
@@ -166,7 +158,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_cat(self, args: List[str]):
-        """Вывести содержимое файла. Использование: cat <файл>"""
         if len(args) != 1:
             print("Использование: cat <файл>")
             return
@@ -176,9 +167,7 @@ class CLI:
         except (FileNotFoundError, PermissionError) as e:
             print(f"Ошибка: {e}")
 
-    # ---------- Копирование/перемещение/удаление ----------
     def do_cp(self, args: List[str]):
-        """Копировать файл. Использование: cp <источник> <назначение>"""
         if len(args) != 2:
             print("Использование: cp <источник> <назначение>")
             return
@@ -189,7 +178,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_mv(self, args: List[str]):
-        """Переместить/переименовать файл. Использование: mv <источник> <назначение>"""
         if len(args) != 2:
             print("Использование: mv <источник> <назначение>")
             return
@@ -200,8 +188,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_rm(self, args: List[str]):
-        """Удалить файл или пустую папку. Для папки с содержимым используйте rm -r.
-        Использование: rm [-r] <путь>"""
         recursive = '-r' in args
         paths = [arg for arg in args if arg != '-r']
         if len(paths) != 1:
@@ -213,9 +199,7 @@ class CLI:
         except (FileNotFoundError, PermissionError, IsADirectoryError) as e:
             print(f"Ошибка: {e}")
 
-    # ---------- Права доступа ----------
     def do_chmod(self, args: List[str]):
-        """Изменить права доступа (восьмерично). Использование: chmod <режим> <путь>"""
         if len(args) != 2:
             print("Использование: chmod <режим> <путь>")
             return
@@ -229,7 +213,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_chown(self, args: List[str]):
-        """Сменить владельца (только admin). Использование: chown <имя_пользователя> <путь>"""
         if len(args) != 2:
             print("Использование: chown <имя_пользователя> <путь>")
             return
@@ -240,7 +223,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_lsperm(self, args: List[str]):
-        """Показать права доступа. Использование: lsperm [путь]"""
         path = args[0] if args else '.'
         entry = self.fs.resolve_path(path)
         if entry is None:
@@ -254,9 +236,7 @@ class CLI:
         print(f"Права: {perms}")  # ожидается строка вида rwxr-xr-x
         print(f"Числовой режим: {perms.owner:o}{perms.group:o}{perms.other:o}")
 
-    # ---------- Архивация ----------
     def do_archive(self, args: List[str]):
-        """Создать ZIP-архив из файлов. Использование: archive <имя_архива> <файл1> [файл2 ...]"""
         if len(args) < 2:
             print("Использование: archive <имя_архива> <файл1> [файл2 ...]")
             return
@@ -269,7 +249,6 @@ class CLI:
             print(f"Ошибка при архивации: {e}")
 
     def do_extract(self, args: List[str]):
-        """Распаковать архив. Использование: extract <архив> [папка_назначения]"""
         if len(args) < 1 or len(args) > 2:
             print("Использование: extract <архив> [папка_назначения]")
             return
@@ -281,9 +260,7 @@ class CLI:
         except Exception as e:
             print(f"Ошибка при распаковке: {e}")
 
-    # ---------- Резервное копирование ----------
     def do_backup(self, args: List[str]):
-        """Создать резервную копию текущего диска. Использование: backup [имя_файла]"""
         name = args[0] if args else None
         try:
             backup(self.fs, name)
@@ -292,7 +269,6 @@ class CLI:
             print(f"Ошибка: {e}")
 
     def do_restore(self, args: List[str]):
-        """Восстановить диск из резервной копии. Использование: restore <имя_файла>"""
         if len(args) != 1:
             print("Использование: restore <имя_файла>")
             return
@@ -302,9 +278,7 @@ class CLI:
         except Exception as e:
             print(f"Ошибка: {e}")
 
-    # ---------- Организация ----------
     def do_organize(self, args: List[str]):
-        """Организовать файлы в папке по формату. Использование: organize <папка>"""
         if len(args) != 1:
             print("Использование: organize <папка>")
             return
@@ -314,16 +288,13 @@ class CLI:
         except Exception as e:
             print(f"Ошибка: {e}")
 
-    # ---------- Справка и выход ----------
     def do_help(self, args: List[str]):
-        """Показать список команд"""
         print("Доступные команды:")
         for name, method in sorted(self.commands.items()):
             doc = method.__doc__.strip() if method.__doc__ else ''
             print(f"  {name:12} {doc}")
 
     def do_exit(self, args: List[str]):
-        """Выйти из программы"""
         self.fs.save()  # <-- добавлено
         print("Выход...")
         raise KeyboardInterrupt

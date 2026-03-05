@@ -8,10 +8,6 @@ from models.file_format import FileFormat
 
 
 def archive(fs: FileSystem, sources: List[str], archive_name: str) -> File:
-    """
-    Создать ZIP-архив из указанных файлов и сохранить в текущей папке.
-    sources: список путей к файлам (только файлы, не папки).
-    """
     if fs.current_folder is None:
         raise RuntimeError("Нет текущей папки")
     if not fs.current_folder.permissions.can_write(fs.current_user, fs.current_folder):
@@ -44,9 +40,6 @@ def archive(fs: FileSystem, sources: List[str], archive_name: str) -> File:
 
 
 def extract(fs: FileSystem, archive_path: str, destination: str) -> None:
-    """
-    Распаковать ZIP-архив в указанную папку.
-    """
     archive_entry = fs.resolve_path(archive_path)
     if archive_entry is None:
         raise FileNotFoundError(f"Архив '{archive_path}' не найден")

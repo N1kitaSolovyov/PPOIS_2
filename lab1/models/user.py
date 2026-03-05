@@ -12,8 +12,8 @@ class User:
         self.created_at = datetime.now()
         self.home_directory = None
         self.current_directory = None
-        self.home_path: Optional[str] = None  # строка пути для сериализации
-        self.current_path: Optional[str] = None  # строка пути для сериализации
+        self.home_path: Optional[str] = None
+        self.current_path: Optional[str] = None
         self.groups = ["users"]
         self.permissions = {
             "read_own_files": True,
@@ -49,7 +49,6 @@ class User:
         user.permissions = data.get("permissions", {})
         user.home_path = data.get("home_path")
         user.current_path = data.get("current_path")
-        # Объекты home_directory и current_directory будут восстановлены позже
         return user
 
     def set_home(self, folder: 'Folder') -> None:

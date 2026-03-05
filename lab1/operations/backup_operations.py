@@ -8,9 +8,6 @@ from models.file_format import FileFormat
 
 
 def backup(fs: FileSystem, name: Optional[str] = None) -> File:
-    """
-    Создать резервную копию текущего диска в папке 'backups'.
-    """
     if fs.current_disk is None:
         raise RuntimeError("Нет текущего диска")
     root = fs.current_disk.root
@@ -27,9 +24,7 @@ def backup(fs: FileSystem, name: Optional[str] = None) -> File:
         name = f"backup_{timestamp}.json"
     elif not name.endswith('.json'):
         name += '.json'
-
-    # Простая сериализация: сохраняем только структуру диска (без пользователей)
-    disk_data = fs.current_disk.to_dict()  # предполагаем, что to_dict существует
+    disk_data = fs.current_disk.to_dict()
     backup_content = json.dumps(disk_data, indent=2, ensure_ascii=False).encode('utf-8')
 
     backup_file = File(name, fs.current_user, FileFormat.JSON, content=backup_content)
@@ -38,9 +33,6 @@ def backup(fs: FileSystem, name: Optional[str] = None) -> File:
 
 
 def restore(fs: FileSystem, backup_name: str) -> None:
-    """
-    Восстановить диск из резервной копии.
-    """
     if fs.current_disk is None:
         raise RuntimeError("Нет текущего диска")
     root = fs.current_disk.root
@@ -62,7 +54,6 @@ def restore(fs: FileSystem, backup_name: str) -> None:
 
     from models.disk import Disk
     new_disk = Disk.from_dict(data, fs.users)
-    # Заменяем текущий диск в списке
     for i, disk in enumerate(fs.disks):
         if disk.disk_id == fs.current_disk.disk_id:
             fs.disks[i] = new_disk

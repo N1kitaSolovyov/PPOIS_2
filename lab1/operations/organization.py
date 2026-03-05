@@ -3,10 +3,6 @@ from models.folder import Folder
 
 
 def organize(fs: FileSystem, folder_path: str) -> None:
-    """
-    Организовать файлы в указанной папке: создать подпапки по категориям форматов
-    и переместить файлы в соответствующие подпапки.
-    """
     folder = fs.resolve_path(folder_path)
     if folder is None or not isinstance(folder, Folder):
         raise NotADirectoryError(f"'{folder_path}' не является папкой или не существует")

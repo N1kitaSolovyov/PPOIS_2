@@ -12,7 +12,7 @@ class Permissions:
         EXECUTE = 1 # 001
         NONE = 0
 
-    def __init__(self, owner: int = 0o7, group: int = 0o5, other: int = 0o5):  # Изменено!
+    def __init__(self, owner: int = 0o7, group: int = 0o5, other: int = 0o5):
         self._owner = 0
         self._group = 0
         self._other = 0

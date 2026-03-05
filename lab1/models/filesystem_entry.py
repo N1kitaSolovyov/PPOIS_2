@@ -9,7 +9,6 @@ if TYPE_CHECKING:
     from .disk import Disk
 
 class FileSystemEntry(ABC):
-    """Абстрактный базовый класс для всех элементов файловой системы"""
 
     def __init__(self, name: str, owner: 'User', group: str = "users", permissions: Optional['Permissions'] = None) -> None:
         self._name = name
@@ -75,7 +74,6 @@ class FileSystemEntry(ABC):
 
     @property
     def disk(self) -> Optional['Disk']:
-        """Возвращает диск, которому принадлежит элемент, поднимаясь по parent до корня."""
         if hasattr(self, '_disk') and self._disk is not None:
             return self._disk
         if self._parent is not None:
@@ -83,10 +81,6 @@ class FileSystemEntry(ABC):
         return None
 
     def get_path(self) -> str:
-        """
-        Возвращает абсолютный путь от корня диска.
-        Для корневого элемента (parent is None) возвращает '/'.
-        """
         if self._parent is None:
             return '/'
         parts = []

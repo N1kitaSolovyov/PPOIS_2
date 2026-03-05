@@ -19,15 +19,15 @@ class Folder(FileSystemEntry):
     ) -> None:
         super().__init__(name, owner, group, permissions)
         self._children: Dict[str, 'FileSystemEntry'] = {}
-        self._disk: Optional['Disk'] = None  # ссылка на диск (только для корня)
+        self._disk: Optional['Disk'] = None
 
     def add_entry(self, entry: 'FileSystemEntry') -> None:
         if entry.name in self._children:
             raise FileExistsError(f"Элемент с именем '{entry.name}' уже существует в папке '{self.name}'")
         self._children[entry.name] = entry
-        entry._parent = self
+        entry._parent = (
+            self)
         self._update_modified()
-        # Обновляем свободное место на диске
         disk = self.disk
         if disk:
             disk.update_free_space()
@@ -38,7 +38,6 @@ class Folder(FileSystemEntry):
         entry = self._children.pop(name)
         entry._parent = None
         self._update_modified()
-        # Обновляем свободное место на диске
         disk = self.disk
         if disk:
             disk.update_free_space()
