@@ -136,3 +136,12 @@
 | `help` | Показать список всех команд |
 | `exit` | Выйти из программы (сохраняет состояние) |
 
+Диаграмма классов:
+
+<img width="1006" height="557" alt="{601F8811-CA4A-43BD-AAF1-1587F56D67AD}" src="https://github.com/user-attachments/assets/eee6036d-7fe5-4596-9c58-6ad66ed76e9c" />
+
+Диаграмма состояний:
+
+<img width="1173" height="588" alt="{CAA668B6-4652-4246-9EA8-D1A73B63A354}" src="https://github.com/user-attachments/assets/e7d9c581-a274-4023-b216-80b37ed0e7b0" />
+
+
