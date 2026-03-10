@@ -138,12 +138,13 @@
 
 Диаграмма классов:
 
-<img width="751" height="487" alt="{CCB7A773-EFAF-4054-932A-89F9B3AA22DF}" src="https://github.com/user-attachments/assets/4473bb9a-652b-4132-b555-1bd124fd27e5" />
+
+![Uploading class_diagram_fs.png…]()
 
 
 Диаграмма состояний:
 
 
-<img width="390" height="573" alt="{6EE4C59A-13E0-48EE-BC5D-7E15F18D045E}" src="https://github.com/user-attachments/assets/69a9de3a-18ec-468c-8ef6-8739e11cdfb3" />
+![Uploading edited_system_command_execution_ru.png…]()
 
 
