@@ -138,10 +138,12 @@
 
 Диаграмма классов:
 
-<img width="1006" height="557" alt="{601F8811-CA4A-43BD-AAF1-1587F56D67AD}" src="https://github.com/user-attachments/assets/eee6036d-7fe5-4596-9c58-6ad66ed76e9c" />
+<img width="751" height="487" alt="{CCB7A773-EFAF-4054-932A-89F9B3AA22DF}" src="https://github.com/user-attachments/assets/4473bb9a-652b-4132-b555-1bd124fd27e5" />
+
 
 Диаграмма состояний:
 
-<img width="1173" height="588" alt="{CAA668B6-4652-4246-9EA8-D1A73B63A354}" src="https://github.com/user-attachments/assets/e7d9c581-a274-4023-b216-80b37ed0e7b0" />
+
+<img width="390" height="573" alt="{6EE4C59A-13E0-48EE-BC5D-7E15F18D045E}" src="https://github.com/user-attachments/assets/69a9de3a-18ec-468c-8ef6-8739e11cdfb3" />
 
 
