@@ -1,0 +1,289 @@
+2026-07-03 15:13:40 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:13:40 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001DB35BBD160>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:13:40 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:13:40 - app - INFO - Результат add_transaction: None
+2026-07-03 15:13:40 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001DB35BBD160>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:13:40 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:13:40 - app - INFO - Результат add_transaction: None
+2026-07-03 15:13:40 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001DB35BBD160>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:13:40 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:13:40 - app - INFO - Результат add_transaction: None
+2026-07-03 15:13:40 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:13:40 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x000001DB35BBD160>, 2), kwargs={}
+2026-07-03 15:13:40 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:13:40 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:13:40 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:13:40 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000001DB35BBD160>, 2), kwargs={}
+2026-07-03 15:13:40 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:13:40 - app - INFO - Результат delete: None
+2026-07-03 15:13:40 - app - INFO - После удаления id=2:
+2026-07-03 15:13:40 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:13:40 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:13:40 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000001DB35BBD160>, 999), kwargs={}
+2026-07-03 15:13:40 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:13:40 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:15:58 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:15:58 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002B1EC0FD160>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:15:58 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:15:58 - app - INFO - Результат add_transaction: None
+2026-07-03 15:15:58 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002B1EC0FD160>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:15:58 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:15:58 - app - INFO - Результат add_transaction: None
+2026-07-03 15:15:58 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002B1EC0FD160>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:15:58 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:15:58 - app - INFO - Результат add_transaction: None
+2026-07-03 15:15:58 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:15:58 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x000002B1EC0FD160>, 2), kwargs={}
+2026-07-03 15:15:58 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:15:58 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:15:58 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:15:58 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000002B1EC0FD160>, 2), kwargs={}
+2026-07-03 15:15:58 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:15:58 - app - INFO - Результат delete: None
+2026-07-03 15:15:58 - app - INFO - После удаления id=2:
+2026-07-03 15:15:58 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:15:58 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:15:58 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000002B1EC0FD160>, 999), kwargs={}
+2026-07-03 15:15:58 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:15:58 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:15:58 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:15:58 - app - INFO - Время работы save_to_file: 0.0004248999757692218
+2026-07-03 15:15:58 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:15:58 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:15:58 - app - INFO - Время работы load_from_file: 0.009527800022624433
+2026-07-03 15:15:58 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:15:58 - app - INFO - Загруженные транзакции:
+2026-07-03 15:15:58 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Р—Р°СЂРїР»Р°С‚Р°', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:15:58 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='РљРѕС„Рµ', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:15:58 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 15:19:42 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:19:42 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002555B41D010>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:19:42 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:19:42 - app - INFO - Результат add_transaction: None
+2026-07-03 15:19:42 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002555B41D010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:19:42 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:42 - app - INFO - Результат add_transaction: None
+2026-07-03 15:19:42 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002555B41D010>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:19:42 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:42 - app - INFO - Результат add_transaction: None
+2026-07-03 15:19:42 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:19:42 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x000002555B41D010>, 2), kwargs={}
+2026-07-03 15:19:42 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:19:42 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:42 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:42 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000002555B41D010>, 2), kwargs={}
+2026-07-03 15:19:42 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:19:42 - app - INFO - Результат delete: None
+2026-07-03 15:19:42 - app - INFO - После удаления id=2:
+2026-07-03 15:19:42 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:19:42 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:42 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000002555B41D010>, 999), kwargs={}
+2026-07-03 15:19:42 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:19:42 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:19:42 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:19:42 - app - INFO - Время работы save_to_file: 0.0003754999488592148
+2026-07-03 15:19:42 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:19:42 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:19:42 - app - INFO - Время работы load_from_file: 0.0009672000305727124
+2026-07-03 15:19:42 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:19:42 - app - INFO - Загруженные транзакции:
+2026-07-03 15:19:42 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:19:42 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:42 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 15:19:58 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:19:58 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000282BCF4D010>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:19:58 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:19:58 - app - INFO - Результат add_transaction: None
+2026-07-03 15:19:58 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000282BCF4D010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:19:58 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:58 - app - INFO - Результат add_transaction: None
+2026-07-03 15:19:58 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000282BCF4D010>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:19:58 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:58 - app - INFO - Результат add_transaction: None
+2026-07-03 15:19:58 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:19:58 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x00000282BCF4D010>, 2), kwargs={}
+2026-07-03 15:19:58 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:19:58 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:58 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:58 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x00000282BCF4D010>, 2), kwargs={}
+2026-07-03 15:19:58 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:19:58 - app - INFO - Результат delete: None
+2026-07-03 15:19:58 - app - INFO - После удаления id=2:
+2026-07-03 15:19:58 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:19:58 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:58 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x00000282BCF4D010>, 999), kwargs={}
+2026-07-03 15:19:58 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:19:58 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:19:58 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:19:58 - app - INFO - Время работы save_to_file: 0.000435599940828979
+2026-07-03 15:19:58 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:19:58 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:19:58 - app - INFO - Время работы load_from_file: 0.0014977999962866306
+2026-07-03 15:19:58 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:19:58 - app - INFO - Загруженные транзакции:
+2026-07-03 15:19:58 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:19:58 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:19:58 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 15:21:15 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:21:15 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x0000023E5CD9D010>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:21:15 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:21:15 - app - INFO - Результат add_transaction: None
+2026-07-03 15:21:15 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x0000023E5CD9D010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:21:15 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:21:15 - app - INFO - Результат add_transaction: None
+2026-07-03 15:21:15 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x0000023E5CD9D010>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:21:15 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:21:15 - app - INFO - Результат add_transaction: None
+2026-07-03 15:21:15 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:21:15 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x0000023E5CD9D010>, 2), kwargs={}
+2026-07-03 15:21:15 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:21:15 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:21:15 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:21:15 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x0000023E5CD9D010>, 2), kwargs={}
+2026-07-03 15:21:15 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:21:15 - app - INFO - Результат delete: None
+2026-07-03 15:21:15 - app - INFO - После удаления id=2:
+2026-07-03 15:21:15 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:21:15 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:21:15 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x0000023E5CD9D010>, 999), kwargs={}
+2026-07-03 15:21:15 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:21:15 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:21:15 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:21:15 - app - INFO - Время работы save_to_file: 0.0005087000317871571
+2026-07-03 15:21:15 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:21:15 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:21:15 - app - INFO - Время работы load_from_file: 0.0010973999742418528
+2026-07-03 15:21:15 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:21:15 - app - INFO - Загруженные транзакции:
+2026-07-03 15:21:15 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:21:15 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:21:15 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 15:23:06 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:23:06 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001E40CE5D010>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:23:06 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:23:06 - app - INFO - Результат add_transaction: None
+2026-07-03 15:23:06 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001E40CE5D010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:23:06 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:23:06 - app - INFO - Результат add_transaction: None
+2026-07-03 15:23:06 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001E40CE5D010>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:23:06 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:23:06 - app - INFO - Результат add_transaction: None
+2026-07-03 15:23:06 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:23:06 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x000001E40CE5D010>, 2), kwargs={}
+2026-07-03 15:23:06 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:23:06 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:23:06 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:23:06 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000001E40CE5D010>, 2), kwargs={}
+2026-07-03 15:23:06 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:23:06 - app - INFO - Результат delete: None
+2026-07-03 15:23:06 - app - INFO - После удаления id=2:
+2026-07-03 15:23:06 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:23:06 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:23:06 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x000001E40CE5D010>, 999), kwargs={}
+2026-07-03 15:23:06 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:23:06 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:23:06 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:23:06 - app - INFO - Время работы save_to_file: 0.0004186999285593629
+2026-07-03 15:23:06 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:23:06 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:23:06 - app - INFO - Время работы load_from_file: 0.00032919994555413723
+2026-07-03 15:23:06 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:23:06 - app - INFO - Загруженные транзакции:
+2026-07-03 15:23:06 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:23:06 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:23:06 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 15:24:15 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:24:15 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000168E0971010>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:24:15 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:24:15 - app - INFO - Результат add_transaction: None
+2026-07-03 15:24:15 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000168E0971010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:24:15 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:24:15 - app - INFO - Результат add_transaction: None
+2026-07-03 15:24:15 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000168E0971010>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:24:15 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:24:15 - app - INFO - Результат add_transaction: None
+2026-07-03 15:24:15 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:24:15 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x00000168E0971010>, 2), kwargs={}
+2026-07-03 15:24:15 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:24:15 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:24:15 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:24:15 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x00000168E0971010>, 2), kwargs={}
+2026-07-03 15:24:15 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:24:15 - app - INFO - Результат delete: None
+2026-07-03 15:24:15 - app - INFO - После удаления id=2:
+2026-07-03 15:24:15 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:24:15 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:24:15 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x00000168E0971010>, 999), kwargs={}
+2026-07-03 15:24:15 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:24:15 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:24:15 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:24:15 - app - INFO - Время работы save_to_file: 0.0007781999884173274
+2026-07-03 15:24:15 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:24:15 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:24:15 - app - INFO - Время работы load_from_file: 0.0004149000160396099
+2026-07-03 15:24:15 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:24:15 - app - INFO - Загруженные транзакции:
+2026-07-03 15:24:15 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:24:15 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:24:15 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 15:25:10 - app - INFO - === НАЧАЛО ТЕСТА ===
+2026-07-03 15:25:10 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x0000016399591010>, Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')), kwargs={}
+2026-07-03 15:25:10 - app - INFO - Добавлена транзакция Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:25:10 - app - INFO - Результат add_transaction: None
+2026-07-03 15:25:10 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x0000016399591010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:25:10 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:25:10 - app - INFO - Результат add_transaction: None
+2026-07-03 15:25:10 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x0000016399591010>, Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')), kwargs={}
+2026-07-03 15:25:10 - app - INFO - Добавлена транзакция Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:25:10 - app - INFO - Результат add_transaction: None
+2026-07-03 15:25:10 - app - INFO - Все транзакции: [Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary'), Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food'), Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')]
+2026-07-03 15:25:10 - app - INFO - Вызов функции get_by_id с args=(<models.TransactionManager object at 0x0000016399591010>, 2), kwargs={}
+2026-07-03 15:25:10 - app - INFO - Получена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:25:10 - app - INFO - Результат get_by_id: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:25:10 - app - INFO - Найдено по id=2: Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:25:10 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x0000016399591010>, 2), kwargs={}
+2026-07-03 15:25:10 - app - INFO - Удалена транзакция - Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='food') по id 2
+2026-07-03 15:25:10 - app - INFO - Результат delete: None
+2026-07-03 15:25:10 - app - INFO - После удаления id=2:
+2026-07-03 15:25:10 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:25:10 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:25:10 - app - INFO - Вызов функции delete с args=(<models.TransactionManager object at 0x0000016399591010>, 999), kwargs={}
+2026-07-03 15:25:10 - app - ERROR - Ошибка в delete: Транзакция с id 999 не найдена
+2026-07-03 15:25:10 - app - ERROR - Ожидаемая ошибка: Транзакция с id 999 не найдена
+2026-07-03 15:25:10 - app - INFO - Сохранено 2 транзакций в файл 'data.json'
+2026-07-03 15:25:10 - app - INFO - Время работы save_to_file: 0.0007464999798685312
+2026-07-03 15:25:10 - app - INFO - Результат save_to_file: None сек
+2026-07-03 15:25:10 - app - INFO - Загружено 2 транзакций из файла 'data.json'
+2026-07-03 15:25:10 - app - INFO - Время работы load_from_file: 0.0003081000177189708
+2026-07-03 15:25:10 - app - INFO - Результат load_from_file: None сек
+2026-07-03 15:25:10 - app - INFO - Загруженные транзакции:
+2026-07-03 15:25:10 - app - INFO - Transaction(id=1, amount=1500, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='salary')
+2026-07-03 15:25:10 - app - INFO - Transaction(id=3, amount=300, date=2026-07-03, description='Кофе', type=TransactionType.EXPENSE, category='food')
+2026-07-03 15:25:10 - app - INFO - === КОНЕЦ ТЕСТА ===
+2026-07-03 16:30:00 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000251FC81D010>, Transaction(id=1, amount=100, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='')), kwargs={}
+2026-07-03 16:30:00 - app - INFO - Добавлена транзакция Transaction(id=1, amount=100, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='')
+2026-07-03 16:30:00 - app - INFO - Результат add_transaction: None
+2026-07-03 16:30:00 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000251FC81D010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='')), kwargs={}
+2026-07-03 16:30:00 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='')
+2026-07-03 16:30:00 - app - INFO - Результат add_transaction: None
+2026-07-03 16:30:00 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x00000251FC81D010>, Transaction(id=3, amount=50, date=2026-07-03, description='Премия', type=TransactionType.INCOME, category='')), kwargs={}
+2026-07-03 16:30:00 - app - INFO - Добавлена транзакция Transaction(id=3, amount=50, date=2026-07-03, description='Премия', type=TransactionType.INCOME, category='')
+2026-07-03 16:30:00 - app - INFO - Результат add_transaction: None
+2026-07-03 17:29:09 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001C64F0DD010>, Transaction(id=1, amount=100, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='')), kwargs={}
+2026-07-03 17:29:09 - app - INFO - Добавлена транзакция Transaction(id=1, amount=100, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='')
+2026-07-03 17:29:09 - app - INFO - Результат add_transaction: None
+2026-07-03 17:29:09 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001C64F0DD010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='')), kwargs={}
+2026-07-03 17:29:09 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='')
+2026-07-03 17:29:09 - app - INFO - Результат add_transaction: None
+2026-07-03 17:29:09 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000001C64F0DD010>, Transaction(id=3, amount=50, date=2026-07-03, description='Премия', type=TransactionType.INCOME, category='')), kwargs={}
+2026-07-03 17:29:09 - app - INFO - Добавлена транзакция Transaction(id=3, amount=50, date=2026-07-03, description='Премия', type=TransactionType.INCOME, category='')
+2026-07-03 17:29:09 - app - INFO - Результат add_transaction: None
+2026-07-03 17:30:38 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002AD8E831010>, Transaction(id=1, amount=100, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='')), kwargs={}
+2026-07-03 17:30:38 - app - INFO - Добавлена транзакция Transaction(id=1, amount=100, date=2026-07-03, description='Зарплата', type=TransactionType.INCOME, category='')
+2026-07-03 17:30:38 - app - INFO - Результат add_transaction: None
+2026-07-03 17:30:38 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002AD8E831010>, Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='')), kwargs={}
+2026-07-03 17:30:38 - app - INFO - Добавлена транзакция Transaction(id=2, amount=200, date=2026-07-03, description='Обед', type=TransactionType.EXPENSE, category='')
+2026-07-03 17:30:38 - app - INFO - Результат add_transaction: None
+2026-07-03 17:30:38 - app - INFO - Вызов функции add_transaction с args=(<models.TransactionManager object at 0x000002AD8E831010>, Transaction(id=3, amount=50, date=2026-07-03, description='Премия', type=TransactionType.INCOME, category='')), kwargs={}
+2026-07-03 17:30:38 - app - INFO - Добавлена транзакция Transaction(id=3, amount=50, date=2026-07-03, description='Премия', type=TransactionType.INCOME, category='')
+2026-07-03 17:30:38 - app - INFO - Результат add_transaction: None
